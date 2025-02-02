@@ -1,14 +1,14 @@
 import { useState } from "react";
 
-export default function Player({ initialName, symbol }) {
+export default function Player({ initialName, symbol, isActive }) {
   const [isEditing, setIsEditing] = useState(false);
   const [name, setName] = useState(initialName);
 
-  function toggleEdit() {
+  function handleEdit() {
     setIsEditing((editing) => !editing);
   }
 
-  function toggleName(event) {
+  function handleName(event) {
     setName(event.target.value);
   }
 
@@ -17,18 +17,18 @@ export default function Player({ initialName, symbol }) {
 
   if (isEditing) {
     playerName = (
-      <input type="text" required defaultValue={name} onChange={toggleName} />
+      <input type="text" required defaultValue={name} onChange={handleName} />
     );
     btnCaption = "Save";
   }
 
   return (
-    <li>
+    <li className={isActive ? "active" : undefined}>
       <span className="player">
         {playerName}
         <span className="player-symbol">{symbol}</span>
       </span>
-      <button onClick={toggleEdit}>{btnCaption}</button>
+      <button onClick={handleEdit}>{btnCaption}</button>
     </li>
   );
 }
