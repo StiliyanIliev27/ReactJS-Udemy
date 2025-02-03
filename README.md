@@ -1,7 +1,7 @@
 # React.js Udemy Course
 
 <p align="center">
-  <img src="https://media2.dev.to/dynamic/image/width=1080,height=1080,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F096baapsqqt9fks0us99.png" alt="React.js Course" width="500">
+  <img src="https://miro.medium.com/v2/resize:fit:1400/1*vHHBwcUFUaHWXntSnqKdCA.png" alt="React.js Course" width=500>
 </p>
 
 ## Course Overview
