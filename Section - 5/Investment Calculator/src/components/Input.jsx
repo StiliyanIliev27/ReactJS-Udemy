@@ -1,16 +1,20 @@
-import { useState } from "react";
-
-export default function Input({ labelFor, labelName }) {
-  const [inputValue, setInputValue] = useState("");
-
+export default function Input({ labelFor, labelName, value, onInputChange }) {
   function handleChange(event) {
-    setInputValue(event.target.value);
+    const newValue = event.target.value;
+
+    onInputChange(labelFor, newValue === "" ? "" : +newValue);
   }
 
   return (
     <div>
       <label for={labelFor}>{labelName}</label>
-      <input type="number" name={labelFor} onChange={handleChange} required />
+      <input
+        type="number"
+        name={labelFor}
+        value={value}
+        onChange={handleChange}
+        required
+      />
     </div>
   );
 }
