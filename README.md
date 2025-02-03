@@ -1,5 +1,9 @@
 # React.js Udemy Course
 
+<p align="center">
+  <img src="https://media2.dev.to/dynamic/image/width=1080,height=1080,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F096baapsqqt9fks0us99.png" alt="React.js Course" width="500">
+</p>
+
 ## Course Overview
 A comprehensive introduction to React.js, covering all essential concepts and advanced topics to help you build dynamic, interactive, and scalable web applications.
 
