@@ -9,20 +9,29 @@ const projects = [
     name: "Learning React",
     description: "Learn React from the group up.",
     date: "Dec 29, 2024",
-    tasks: ["Learn advanced concepts", "Learn the basics"],
+    tasks: [
+      {
+        id: 1,
+        title: "Learn advanced concepts",
+      },
+      {
+        id: 2,
+        title: "Learn the basics",
+      },
+    ],
   },
 ];
 
-function getProjectInfo(id) {
-  return projects.find((project) => project.id === id);
-}
-
 function App() {
   const [isModalShown, setShowModal] = useState(false);
-  const [projectsInfo, setProjects] = useState(projects);
+  const [projectsInfo, setProjects] = useState([...projects]);
   const [selectedProjectId, setSelectedProjectId] = useState(
     projects.length > 0 ? projects[0].id : null
   );
+
+  function getProjectInfo(id) {
+    return projectsInfo.find((project) => project.id === id);
+  }
 
   function toggleModal() {
     setShowModal(true);
@@ -41,12 +50,46 @@ function App() {
         tasks: [],
       },
     ]);
-
-    console.log(projectsInfo);
   }
 
   function toggleClick(id) {
     setSelectedProjectId(id);
+  }
+
+  function toggleAddTask(task) {
+    setProjects((prevProjects) =>
+      prevProjects.map((project) =>
+        project.id === selectedProjectId
+          ? {
+              ...project,
+              tasks: [
+                ...project.tasks,
+                { id: project.tasks.length + 1, title: task },
+              ],
+            }
+          : project
+      )
+    );
+  }
+
+  function toggleRemoveTask(taskId) {
+    setProjects((prevProjects) =>
+      prevProjects.map((project) =>
+        project.id === selectedProjectId
+          ? {
+              ...project,
+              tasks: project.tasks.filter((task) => task.id !== taskId),
+            }
+          : project
+      )
+    );
+  }
+
+  function toggleDeleteProject(projectId){
+    setProjects((prevProjects) =>
+      prevProjects.filter((project) => project.id !== projectId) 
+    );
+    setSelectedProjectId(null);
   }
 
   return (
@@ -68,7 +111,10 @@ function App() {
         <div className="w-[35rem] mt-16">
           <ProjectDetails
             toggleModal={toggleModal}
-            projectInfo={() => getProjectInfo(selectedProjectId)}
+            toggleAddTask={toggleAddTask}
+            toggleRemoveTask={toggleRemoveTask}
+            toggleDeleteProject={toggleDeleteProject}
+            projectInfo={projectsInfo.find((p) => p.id === selectedProjectId)}
           />
         </div>
       </main>
