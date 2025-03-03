@@ -1,5 +1,5 @@
 # Mini Project Management App
-
+ 
 ![Screenshot 2025-02-13 194509](https://github.com/user-attachments/assets/aac19eb5-c354-4b5e-9843-094053370056)
 
 This is a simple project management app developed as part of Section 9 of the React.js course. The app is designed to help users manage projects and their associated tasks efficiently. It's a small application created to practice and exercise the current concepts and skills learned in React.js.
