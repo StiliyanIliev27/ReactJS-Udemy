@@ -109,6 +109,11 @@ h1 {
 
 .cart h2 {
   margin: 1rem 0;
+  color: black;
+}
+
+.cart p{
+  color: black;
 }
 
 .cart ul {
@@ -148,6 +153,21 @@ h1 {
   margin: 0.5rem 0;
 }
 
+.cart-item span{
+  color: black;
+}
+
+.empty-cart{
+  text-align: center;
+  font-weight: bold;
+}
+
+.empty-cart img{
+  width: 30%;
+  max-width: 20rem;
+  height: auto;
+}
+
 .cart-item p {
   margin: 0;
 }
@@ -178,10 +198,19 @@ h1 {
   color: #ffab04;
 }
 
+form{
+  margin-bottom: 2em;
+}
+
 .control {
   margin: 0.5rem 0;
   display: flex;
   flex-direction: column;
+  color: black;
+}
+
+.control p{
+  margin-top: 0;
 }
 
 .control label {
@@ -202,6 +231,7 @@ h1 {
   display: flex;
   justify-content: flex-start;
   gap: 1rem;
+  width: 65%;
 }
 
 .button {
@@ -234,6 +264,16 @@ h1 {
   color: #ffab04;
 }
 
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
 .modal {
   background-color: #e4ddd4;
   border-radius: 6px;
@@ -242,6 +282,11 @@ h1 {
   padding: 1rem;
   width: 80%;
   max-width: 40rem;
+  position: fixed;
+  top: 35%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
   animation: fade-slide-up 0.3s ease-out forwards;
 }
 
