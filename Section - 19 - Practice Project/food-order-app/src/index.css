@@ -209,6 +209,10 @@ form{
   color: black;
 }
 
+.control-center{
+  align-items: center;
+}
+
 .control p{
   margin-top: 0;
 }
