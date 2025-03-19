@@ -1,12 +1,1 @@
-{
-  "events": [
-    {
-      "title": "A new event",
-      "image": "https://cdn.muenchen-p.de/fl_progressive,q_65/.imaging/stk/responsive/teaser300/dms/va-2016/muenchner-christkindlmarkt/christkindlmarkt-marienplat-logo-hp/document/christkindlmarkt-marienplat-logo-hp.jpg",
-      "date": "2022-10-01",
-      "description": "Some awesome event!",
-      "id": "2a42fcc4-ea21-4bdd-abf6-c40006dc66a9"
-    }
-  ],
-  "users": []
-}
+{"events":[{"title":"concert","image":"https://cdn.iccbelfast.com/ICC-Belfast-Hall-1A-Tata-Genuine-Parts-for-their-Annual-Distributor-Conference-Hero-Image-1920x1080px-1.jpg","date":"2025-03-21","description":"desc","id":"e3883a99-1849-4cf2-b880-76906882c401"}],"users":[{"email":"stiliyaniliev2705@gmail.com","password":"$2a$12$UHeh0s.0VncYaEtfeOUwvu4WtsU/nUChisOI0AFGn7Z8ZqFicGyCK","id":"65bc6c9a-2fe0-4e8a-b064-4077ebea14bf"}]}
